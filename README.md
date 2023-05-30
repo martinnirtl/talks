@@ -4,7 +4,7 @@ Hi there 👋
 
 With my start at [Mirantis](https://www.mirantis.com/), I have started giving public talks 🗣️ on various tech topics. At some point, I thought it would maybe be useful for you to understand what and where  I did my research. Also, I want to share configuration and other stuff that I have created for my demos. Hope you find it useful!! 🤓
 
-Please find my talks and resources in the table below!
+## Talks
 
 | Topic | Date | Recording | |
 | ----------- | ----------- | ----------- | ----------- |
