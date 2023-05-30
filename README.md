@@ -6,10 +6,10 @@ With my start at [Mirantis](https://www.mirantis.com/), I have started giving pu
 
 Please find my talks and resources in the table below!
 
-| Topic | Date | |
+| Topic | Date | Recording | |
 | ----------- | ----------- | ----------- |
-| OpenTelemetry | 2023-05-16 | [Coming soon](mirantis/labs/20230516_open-telemetry/) |
-| Secret Management | 2023-05-30 | [Read more](mirantis/labs/20230530_secret-management/) |
+| OpenTelemetry | 2023-05-16 | [Youtube](https://www.youtube.com/watch?v=50XZxtrvjU8&t=1672s) | [Read more](mirantis/labs/20230516_open-telemetry/) |
+| Secret Management | 2023-05-30 | Pending event... | [Read more](mirantis/labs/20230530_secret-management/) |
 
 ### Feedback
 

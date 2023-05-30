@@ -14,7 +14,7 @@ In this Tech Talk, we’ll show you:
 
 ## Demo
 
-I need to cleanup the demo deployment files first 🙈, before I will upload them here! Expect them till 1st of June, 2023 🤞
+I need to cleanup the demo deployment files first 🙈, before I will upload them here! Expect them with 1st of June, 2023 🤞
 
 ## Research
 
