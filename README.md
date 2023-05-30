@@ -11,4 +11,7 @@ Please find my talks and resources in the table below!
 | OpenTelemetry | 2023-05-16 | [Coming soon](mirantis/labs/20230516_open-telemetry/) |
 | Secret Management | 2023-05-30 | [Read more](mirantis/labs/20230530_secret-management/) |
 
-PS. If you want me to look into a specific topic, reach out to me on [Twitter](https://twitter.com/martinnirtl), [LinkedIn](https://www.linkedin.com/in/martinnirtl/) or CNCF/Kubernetes Slack!
+### Feedback
+
+Feedback is highly appreciated and welcome! Also, if you want me to look into a specific topic, just reach out to me!
+You can find me on [Twitter](https://twitter.com/martinnirtl), [LinkedIn](https://www.linkedin.com/in/martinnirtl/) or CNCF & Kubernetes Slack (Martin Nirtl)!
