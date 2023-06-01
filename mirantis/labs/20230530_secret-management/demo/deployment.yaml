@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+  labels:
+    app: my-app
+  namespace: my-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - command:
+        - tail
+        - -f
+        - /dev/null
+        image: busybox
+        name: busybox
+        resources: {}
+        env:
+        - name: API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: config
+              key: api-token
+        volumeMounts:
+        - name: config
+          mountPath: "/etc/my-app"
+          readOnly: true
+        - name: config
+          mountPath: "/etc/my-app-subPath/api-token"
+          subPath: api-token
+          readOnly: true
+      volumes:
+      - name: config
+        secret:
+          secretName: config

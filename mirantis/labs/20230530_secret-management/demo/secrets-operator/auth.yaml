@@ -1,0 +1,12 @@
+apiVersion: secrets.hashicorp.com/v1alpha1
+kind: VaultAuth
+metadata:
+  namespace: my-app
+  name: vault-local
+spec:
+  vaultConnectionRef: vault-local
+  method: kubernetes
+  mount: kubernetes/local
+  kubernetes:
+    role: my-app
+    serviceAccount: my-app
