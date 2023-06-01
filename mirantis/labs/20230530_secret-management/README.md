@@ -1,7 +1,7 @@
 # Secret Management
 
-| Recording | [Youtube](https://youtu.be/LEno2fVuJ8U) |
-| Slides | [Download](slides.pdf) |
+Recording on Youtube: https://youtu.be/LEno2fVuJ8U
+Slides: [Click here](slides.pdf)
 
 ### Event Description
 While out-of-the-box Kubernetes provides rudimentary secret management, most teams need more sophisticated functionality like dynamic secrets and secret rotation.
