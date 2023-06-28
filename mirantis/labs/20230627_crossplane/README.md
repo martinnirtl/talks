@@ -1,6 +1,6 @@
 # Crossplane
 
-Recording on Youtube: 
+Recording on Youtube: https://youtu.be/UYuHrn3mgC4
 Slides: [Click here](slides.pdf)
 
 ### Event Description

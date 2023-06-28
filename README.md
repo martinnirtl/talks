@@ -10,7 +10,7 @@ With my start at [Mirantis](https://www.mirantis.com/), I have started giving pu
 | ----------- | ----------- | ----------- | ----------- |
 | OpenTelemetry | 2023-05-16 | https://youtu.be/50XZxtrvjU8 | [More...](mirantis/labs/20230516_open-telemetry/) |
 | Secret Management | 2023-05-30 | https://youtu.be/LEno2fVuJ8U | [More...](mirantis/labs/20230530_secret-management/) |
-| Crossplane | 2023-06-30 | Upload pending... | [More...](mirantis/labs/20230627_crossplane/) |
+| Crossplane | 2023-06-30 | https://youtu.be/UYuHrn3mgC4 | [More...](mirantis/labs/20230627_crossplane/) |
 
 ### Feedback
 
