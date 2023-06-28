@@ -1,0 +1,26 @@
+apiVersion: openstack.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: mnirtl-devstack
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      name: mnirtl-devstack-creds
+      namespace: crossplane-system
+      key: credentials
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mnirtl-devstack-creds
+  namespace: crossplane-system
+type: Opaque
+stringData:
+  credentials: |
+    {
+      "auth_url": "http://172.31.7.154/identity",
+      "tenant_name": "demo",
+      "user_name": "demo",
+      "password": "swordfish"
+    }

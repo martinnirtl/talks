@@ -8,8 +8,9 @@ With my start at [Mirantis](https://www.mirantis.com/), I have started giving pu
 
 | Topic | Date | Recording | Slides and more |
 | ----------- | ----------- | ----------- | ----------- |
-| OpenTelemetry | 2023-05-16 | https://youtu.be/50XZxtrvjU8 | [...](mirantis/labs/20230516_open-telemetry/) |
-| Secret Management | 2023-05-30 | https://youtu.be/LEno2fVuJ8U | [...](mirantis/labs/20230530_secret-management/) |
+| OpenTelemetry | 2023-05-16 | https://youtu.be/50XZxtrvjU8 | [More...](mirantis/labs/20230516_open-telemetry/) |
+| Secret Management | 2023-05-30 | https://youtu.be/LEno2fVuJ8U | [More...](mirantis/labs/20230530_secret-management/) |
+| Crossplane | 2023-06-30 | Upload pending... | [More...](mirantis/labs/20230627_crossplane/) |
 
 ### Feedback
 

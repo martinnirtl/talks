@@ -1,0 +1,13 @@
+apiVersion: idpapi.my-company.com/v1alpha1
+kind: DevVM
+metadata:
+  name: dev-machine
+spec:
+  size: large
+  user:
+    name: mnirtl
+    keypair: mnirtl
+  # compositionRef:
+  #   name: devvm
+  writeConnectionSecretToRef:
+    name: dev-machine

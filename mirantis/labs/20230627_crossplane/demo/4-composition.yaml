@@ -1,0 +1,98 @@
+# CONFIGURATION PACKAGE
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xdevvms.idpapi.my-company.com
+spec:
+  group: idpapi.my-company.com
+  names:
+    kind: XDevVM
+    plural: xdevvms
+  claimNames:
+    kind: DevVM
+    plural: devvms
+  connectionSecretKeys:
+  - ip
+  - dnsname
+  defaultCompositionRef:
+    name: devvm
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              user:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  keypair:
+                    type: string
+                required:
+                  - keypair
+              size:
+                type: string
+                pattern: "^(small|medium|large)$"
+
+---
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: devvm
+  labels:
+    crossplane.io/xrd: xdevvms.idpapi.my-company.com
+    provider: openstack
+spec:
+  writeConnectionSecretsToNamespace: crossplane-system
+  compositeTypeRef:
+    apiVersion: idpapi.my-company.com/v1alpha1
+    kind: XDevVM
+  resources:
+  - name: instancev2
+    base:
+      apiVersion: compute.openstack.upbound.io/v1alpha1
+      kind: InstanceV2
+      spec:
+        forProvider:
+          imageName: cirros-0.5.2-x86_64-disk
+          network:
+            - name: shared
+          securityGroups:
+            - default
+        providerConfigRef:
+          name: mnirtl-devstack
+    patches:
+    - type: FromCompositeFieldPath
+      fromFieldPath: metadata.name
+      toFieldPath: spec.forProvider.name
+    - type: FromCompositeFieldPath
+      fromFieldPath: spec.size
+      toFieldPath: spec.forProvider.flavorName
+      transforms:
+      - type: match
+        match:
+          patterns:
+            - type: literal
+              literal: small
+              result: m1.tiny
+            - type: literal
+              literal: medium
+              result: m1.small
+            - type: literal
+              literal: large
+              result: m1.medium
+          fallbackTo: Value
+          fallbackValue: m1.small
+    connectionDetails:
+      - type: FromValue
+        name: dnsname
+        value: "devvm-xy.instances.idp.my-company.com"
+      - type: FromValue
+        name: ip
+        value: 10.0.44.42

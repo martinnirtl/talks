@@ -1,0 +1,8 @@
+# https://marketplace.upbound.io/providers/martinnirtl/provider-openstack
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-openstack
+spec:
+  package: xpkg.upbound.io/martinnirtl/provider-openstack:v0.1.0
+  packagePullPolicy: Always

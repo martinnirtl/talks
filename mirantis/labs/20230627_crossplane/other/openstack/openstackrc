@@ -1,0 +1,8 @@
+
+# export HOST_IP=""
+export OS_USERNAME="demo"
+export OS_PASSWORD="swordfish"
+export SERVICE_HOST="$HOST_IP"
+export OS_AUTH_URL="http://$HOST_IP/identity"
+export OS_PROJECT_DOMAIN_NAME="demo"
+export OS_IDENTITY_API_VERSION="3"

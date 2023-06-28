@@ -1,0 +1,15 @@
+apiVersion: compute.openstack.upbound.io/v1alpha1
+kind: InstanceV2
+metadata:
+  name: test-instance
+spec:
+  forProvider:
+    name: test-instance
+    flavorName: m1.tiny
+    imageName: cirros-0.5.2-x86_64-disk
+    network:
+      - name: shared
+    securityGroups:
+      - default
+  providerConfigRef:
+    name: mnirtl-devstack
