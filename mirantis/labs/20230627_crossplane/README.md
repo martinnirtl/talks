@@ -32,3 +32,8 @@ In case you want to get started with Crossplane, I have put together the followi
 - OpenStack
   - DevStack: https://docs.openstack.org/devstack/latest/
   - TryMOSK (Mirantis OpenStack on Kubernetes): https://www.mirantis.com/download/mirantis-cloud-native-platform/mirantis-openstack-for-kubernetes/
+- Lens Crossplane Extension MVP: https://github.com/mirantis-field/lens-crossplane-extension
+- Upjet for Crossplane provider generation via existing Terraform providers: https://github.com/upbound/upjet
+- Crossplane Provider OpenStack: https://github.com/dusky-mate/provider-openstack
+  - My own Provider Openstack was just a PoC: https://github.com/martinnirtl/provider-openstack
+- Crossplane GitHub Issue around contributing the Provider Openstack to the community: https://github.com/crossplane/crossplane/issues/267
