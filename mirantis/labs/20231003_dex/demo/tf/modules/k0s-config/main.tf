@@ -19,10 +19,10 @@ locals {
             var.api_fqdn,
           ]
           extraArgs = {
-            "feature-gates"       = "APISelfSubjectReview=true"
+            "feature-gates"            = "APISelfSubjectReview=true"
             "service-account-issuer"   = var.service_account_issuer_url
             "service-account-jwks-uri" = "${var.service_account_issuer_url}/openid/v1/jwks"
-            "oidc-issuer-url"          = "https://dex.${var.apps_fqdn}"
+            "oidc-issuer-url"          = var.oidc_issuer_url
             "oidc-client-id"           = "kubernetes"
             "oidc-username-claim"      = "email"
             "oidc-groups-claim"        = "groups"

@@ -1,5 +1,5 @@
 locals {
-  key_name = var.cluster_name
+  key_name = "mnirtl-labs"
   key_path = "${path.module}/.local/ssh.pem"
 }
 

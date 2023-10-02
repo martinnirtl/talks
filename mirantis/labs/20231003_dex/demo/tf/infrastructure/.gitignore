@@ -1,1 +1,4 @@
+.local
+
 .terraform
+terraform.tfstate*
