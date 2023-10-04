@@ -1,6 +1,6 @@
 # Kubernetes Authentication with Dex
 
-Recording on Youtube: Not yet available
+Recording on Youtube: https://youtu.be/AaJUKPiLp7c
 Slides: [Click here](slides.pdf)
 
 ### Event Description
