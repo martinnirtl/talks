@@ -12,3 +12,7 @@ On October 3, Mirantis’ Martin Nirtl will explain the fundamentals of Kubernet
 - How to use Dex to implement SSO for Kubernetes
 - Authorization challenges and best practices for overcoming them
 
+## Demo
+
+Step-by-step guide is coming on Monday!
+
