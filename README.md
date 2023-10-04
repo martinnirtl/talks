@@ -8,7 +8,7 @@ With my start at [Mirantis](https://www.mirantis.com/), I have started giving pu
 
 | Topic | Date | Recording | Slides and more |
 | ----------- | ----------- | ----------- | ----------- |
-| Dex | Oct 3, 2023 | Not yet available | [More...](mirantis/labs/20231003_dex/) |
+| Dex | October 3, 2023 | Not yet available | [More...](mirantis/labs/20231003_dex/) |
 | Crossplane | June 30, 2023 | https://youtu.be/UYuHrn3mgC4 | [More...](mirantis/labs/20230627_crossplane/) |
 | Secret Management | May 30, 2023 | https://youtu.be/LEno2fVuJ8U | [More...](mirantis/labs/20230530_secret-management/) |
 | OpenTelemetry | May 16, 2023 | https://youtu.be/50XZxtrvjU8 | [More...](mirantis/labs/20230516_open-telemetry/) |
