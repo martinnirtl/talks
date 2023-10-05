@@ -27,6 +27,6 @@ variable "oidc_issuer_url" {
   type = string
 }
 
-variable "service_account_issuer_url" {
-  type = string
-}
+# variable "service_account_issuer_url" {
+#   type = string
+# }

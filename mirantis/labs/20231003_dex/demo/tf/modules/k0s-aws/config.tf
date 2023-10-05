@@ -1,13 +1,13 @@
 module "k0s_config" {
   source = "../k0s-config"
 
-  name                       = var.name
-  controllers                = [for host in aws_instance.static_controller : host.public_ip]
-  workers                    = [for host in aws_instance.static_worker : host.public_ip]
-  api_fqdn                   = aws_route53_record.k8s_api.fqdn
-  oidc_issuer_url            = var.oidc_issuer_url
-  service_account_issuer_url = "https://${aws_s3_bucket.openid.bucket_domain_name}"
-  ssh_key_path               = var.ssh_key_path
+  name            = var.name
+  controllers     = [for host in aws_instance.static_controller : host.public_ip]
+  workers         = [for host in aws_instance.static_worker : host.public_ip]
+  api_fqdn        = aws_route53_record.k8s_api.fqdn
+  oidc_issuer_url = var.oidc_issuer_url
+  # service_account_issuer_url = "https://${aws_s3_bucket.openid.bucket_domain_name}"
+  ssh_key_path = "${var.local_dir_path}/ssh_key.pem"
 }
 
 resource "local_file" "k0s_config" {

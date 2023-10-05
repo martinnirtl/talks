@@ -2,9 +2,20 @@ data "aws_route53_zone" "primary" {
   name = var.zone
 }
 
+resource "tls_private_key" "ssh" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+resource "local_file" "private_key" {
+  file_permission = "600"
+  filename        = "${var.local_dir_path}/ssh_key.pem"
+  content         = tls_private_key.ssh.private_key_pem
+}
+
 resource "aws_key_pair" "ssh" {
-  key_name   = var.ssh_key_name
-  public_key = var.ssh_key
+  key_name   = var.name
+  public_key = tls_private_key.ssh.public_key_openssh
 }
 
 data "aws_ami" "ubuntu" {
@@ -34,7 +45,7 @@ resource "aws_launch_template" "node" {
   name          = "${var.name}-node"
   image_id      = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  key_name      = var.ssh_key_name
+  key_name      = aws_key_pair.ssh.key_name
   user_data     = filebase64("${path.module}/user-data/node.sh")
 
   ebs_optimized = true

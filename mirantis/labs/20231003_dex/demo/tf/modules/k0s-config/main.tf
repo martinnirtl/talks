@@ -1,6 +1,20 @@
 # TODO move towards template file: https://developer.hashicorp.com/terraform/language/functions/templatefile
 
 locals {
+  api_extraargs_common = {
+    "feature-gates" = "APISelfSubjectReview=true"
+  }
+  api_extraargs_oidc = var.oidc_issuer_url != "" ? {
+    "oidc-issuer-url"     = var.oidc_issuer_url
+    "oidc-client-id"      = "kubernetes"
+    "oidc-username-claim" = "email"
+    "oidc-groups-claim"   = "groups"
+  } : {}
+  # api_extraargs_serviceaccount = var.service_account_issuer_url != "" ? {
+  #   "service-account-issuer"   = var.service_account_issuer_url
+  #   "service-account-jwks-uri" = "${var.service_account_issuer_url}/openid/v1/jwks"
+  # } : {}
+
   k0s_config = {
     version       = "1.27.1+k0s.0"
     dynamicConfig = true
@@ -18,16 +32,7 @@ locals {
           sans = [
             var.api_fqdn,
           ]
-          extraArgs = {
-            "feature-gates"            = "APISelfSubjectReview=true"
-            "service-account-issuer"   = var.service_account_issuer_url
-            "service-account-jwks-uri" = "${var.service_account_issuer_url}/openid/v1/jwks"
-            "oidc-issuer-url"          = var.oidc_issuer_url
-            "oidc-client-id"           = "kubernetes"
-            "oidc-username-claim"      = "email"
-            "oidc-groups-claim"        = "groups"
-            # "oidc-ca-file"             = "/etc/ssl/certs/openid-ca.pem"
-          }
+          extraArgs = merge(local.api_extraargs_common, local.api_extraargs_oidc)
         }
         installConfig = {
           users = {

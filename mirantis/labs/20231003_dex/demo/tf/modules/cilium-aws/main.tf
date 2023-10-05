@@ -11,6 +11,7 @@ resource "aws_security_group" "cilium" {
   }
 }
 
+# TODO add right in-/egress rules
 resource "aws_vpc_security_group_ingress_rule" "cilium" {
   security_group_id            = aws_security_group.cilium.id
   description                  = "Allow all traffic"
