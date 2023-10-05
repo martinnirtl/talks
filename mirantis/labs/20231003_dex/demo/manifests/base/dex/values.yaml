@@ -1,0 +1,63 @@
+replicaCount: 1
+commonLabels: {}
+
+fullnameOverride: "dex"
+
+https:
+  enabled: true
+
+grpc:
+  enabled: false
+
+configSecret:
+  create: false
+  name: dex
+
+volumes:
+  - name: tls
+    secret:
+      secretName: dex-tls
+
+volumeMounts:
+  - name: tls
+    mountPath: /etc/dex/tls
+
+serviceAccount:
+  create: true
+  annotations: {}
+
+podDisruptionBudget:
+  enabled: false
+  minAvailable: 50
+  maxUnavailable: 50
+
+priorityClassName: ""
+
+service:
+  annotations: {}
+  type: ClusterIP
+  ports:
+    http:
+      port: 5556
+    https:
+      port: 5554
+    grpc:
+      port: 5557
+
+serviceMonitor:
+  enabled: false
+
+resources: {}
+
+autoscaling:
+  enabled: false
+
+topologySpreadConstraints: []
+
+strategy:
+  rollingUpdate:
+    maxUnavailable: 1
+  type: RollingUpdate
+
+networkPolicy:
+  enabled: false

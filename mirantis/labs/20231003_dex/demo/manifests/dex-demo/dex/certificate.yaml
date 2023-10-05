@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dex-tls
+spec:
+  secretName: dex-tls
+  dnsNames: 
+    - dex.apps.labs-dex.mirantis.mart.red
+  issuerRef:
+    group: cert-manager.io
+    kind: ClusterIssuer
+    name: letsencrypt-prod
+  usages:
+    - digital signature
+    - key encipherment

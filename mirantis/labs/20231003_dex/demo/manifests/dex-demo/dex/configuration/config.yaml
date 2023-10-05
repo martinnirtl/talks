@@ -1,0 +1,33 @@
+issuer: https://dex.apps.labs-dex.mirantis.mart.red
+
+storage:
+  type: sqlite3
+  config:
+    file: /var/dex/dex.db
+
+web:
+  https: 0.0.0.0:5554 # TODO check this https://github.com/dexidp/dex/blob/master/examples/k8s/dex.yaml
+  tlsCert: /etc/dex/tls/tls.crt
+  tlsKey: /etc/dex/tls/tls.key
+
+connectors:
+- type: microsoft
+  id: mnirtl
+  name: mnirtl
+  config:
+    clientID: <client-id>
+    clientSecret: <client-secret>
+    redirectURI: https://dex.apps.labs-dex.mirantis.mart.red/callback
+    tenant: <tenant-id>
+    # groups:
+    #   - devops
+    #   - developers
+    # useGroupsAsWhitelist: false
+    emailToLowercase: true
+
+staticClients:
+- id: kubernetes
+  name: kubernetes
+  secret: M1BSMkZUWHYudlVHRGVOLi1ieGI0eiFpQjJxV252SGZHcTZDYyFWWgo=
+  redirectURIs:
+  - "http://localhost:8000"
