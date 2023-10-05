@@ -14,5 +14,5 @@ On October 3, Mirantis’ Martin Nirtl will explain the fundamentals of Kubernet
 
 ## Demo
 
-Step-by-step guide is coming on Monday!
+Terraform files and manifests are here! The step-by-step guide is coming on Monday!
 
