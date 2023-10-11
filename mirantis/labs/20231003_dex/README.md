@@ -14,5 +14,10 @@ On October 3, Mirantis’ Martin Nirtl will explain the fundamentals of Kubernet
 
 ## Demo
 
-Terraform files and manifests are here! The step-by-step guide is coming on Monday!
+> TLDR More accessible demo guide (no AWS, no Azure) coming end of month! (Oct 2023)
+
+After reviewing some feedback, I have decided to publish an easier, alternative demo guide than originally intended. The main reason for the change is that many watchers don't have an AWS nor Azure account.
+However, if you want to go ahead with the stuff I have shown, please find all the files for infra provisioning and app manifests in the [demo](demo) folder. In case you face some issues or have general questions on k0s, Terraform, Kustomize or Dex, please feel free to reach out to me! My email is martin.nirtl@gmail.com
+
+Expect the alternative guide by the end of the October, 2023. Apologize for the delay!
 
