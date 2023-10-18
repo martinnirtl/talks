@@ -11,3 +11,7 @@ Slides: [Click here](slides.pdf)
 
 🌐 Explore the essentials of Kubernetes authentication and get hands-on with Dex through a live demo. Martin will walk you through the pros and cons of various authentication mechanisms for Kubernetes and show you how to implement SSO using Dex.
 Don't miss out on this insightful session that goes beyond authentication! See you there!
+
+## Demo
+
+Configuration and manifests for reproducing the demo are coming soon!
