@@ -6,12 +6,13 @@ With my start at [Mirantis](https://www.mirantis.com/), I have started giving pu
 
 ### Talks
 
-| Topic | Date | Recording | Slides and more |
+| Topic | Event | Date | Recording | |
 | ----------- | ----------- | ----------- | ----------- |
-| Dex | October 3, 2023 | https://youtu.be/AaJUKPiLp7c | [More...](mirantis/labs/20231003_dex/) |
-| Crossplane | June 30, 2023 | https://youtu.be/UYuHrn3mgC4 | [More...](mirantis/labs/20230627_crossplane/) |
-| Secret Management | May 30, 2023 | https://youtu.be/LEno2fVuJ8U | [More...](mirantis/labs/20230530_secret-management/) |
-| OpenTelemetry | May 16, 2023 | https://youtu.be/50XZxtrvjU8 | [More...](mirantis/labs/20230516_open-telemetry/) |
+| SSO for Kubernetes using Dex | Cloud Native Austria | October 19, 2023 | n/a | [More...](misc/cloud_native_austria/dex/) |
+| Dex | Mirantis Labs | October 3, 2023 | [Youtube](https://youtu.be/AaJUKPiLp7c) | [More...](mirantis/labs/dex/) |
+| Crossplane | Mirantis Labs | June 30, 2023 | [Youtube](https://youtu.be/UYuHrn3mgC4) | [More...](mirantis/labs/crossplane/) |
+| Secret Management | Mirantis Labs | May 30, 2023 | [Youtube](https://youtu.be/LEno2fVuJ8U) | [More...](mirantis/labs/secret_management/) |
+| OpenTelemetry | Mirantis Labs | May 16, 2023 | [Youtube](https://youtu.be/50XZxtrvjU8) | [More...](mirantis/labs/opentelemetry/) |
 
 ### Feedback
 
