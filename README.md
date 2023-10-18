@@ -7,7 +7,7 @@ With my start at [Mirantis](https://www.mirantis.com/), I have started giving pu
 ### Talks
 
 | Topic | Event | Date | Recording | |
-| ----------- | ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
 | SSO for Kubernetes using Dex | Cloud Native Austria | October 19, 2023 | n/a | [More...](misc/cloud_native_austria/dex/) |
 | Dex | Mirantis Labs | October 3, 2023 | [Youtube](https://youtu.be/AaJUKPiLp7c) | [More...](mirantis/labs/dex/) |
 | Crossplane | Mirantis Labs | June 30, 2023 | [Youtube](https://youtu.be/UYuHrn3mgC4) | [More...](mirantis/labs/crossplane/) |
