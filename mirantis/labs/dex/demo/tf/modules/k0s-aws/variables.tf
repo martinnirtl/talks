@@ -23,17 +23,6 @@ variable "worker_count" {
   default = 3
 }
 
-variable "nodepools" {
-  type = list(object({
-    min_count   = number
-    min_count   = number
-    min_count   = number
-    template_id = string
-    lb_arn      = string
-  }))
-  default = []
-}
-
 variable "oidc_issuer_url" {
   type = string
 }
