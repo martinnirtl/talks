@@ -1,6 +1,6 @@
 # Platform Engineering with Backstage: Getting Started
 
-Recording on Youtube: n/a
+Recording on Youtube: https://youtu.be/mtfbtjPzaXE
 Slides: [Click here](slides.pdf)
 
 ### Event Description
